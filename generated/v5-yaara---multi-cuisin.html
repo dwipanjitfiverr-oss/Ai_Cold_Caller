@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaara - Multi Cuisine Restaurant | Best restaurant in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; }
+        .heading { font-family: 'Playfair Display', serif; }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #d97706, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 30px #d9770640;
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 50px #d9770660;
+            transform: translateY(-2px);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .glass {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wider">Yaara - Multi Cuisine Restaurant</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-white/80 hover:text-white transition">About</a>
+                <a href="#services" class="text-white/80 hover:text-white transition">Services</a>
+                <a href="#gallery" class="text-white/80 hover:text-white transition">Gallery</a>
+                <a href="#contact" class="px-6 py-2 rounded-full font-semibold transition btn-glow" style="background: linear-gradient(135deg, #d97706, #b45309)">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 rounded-full opacity-20" style="background: #d97706; filter: blur(100px);"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full opacity-20" style="background: #b45309; filter: blur(120px);"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 fade-in">
+            <p class="text-sm md:text-base tracking-[0.3em] uppercase mb-4" style="color: #d97706">Culinary Excellence</p>
+            <h1 class="text-6xl md:text-8xl font-bold heading mb-6 leading-tight">Yaara - Multi Cuisine Restaurant</h1>
+            <p class="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">Experience the best restaurant services in Guwahati. Premium quality, exceptional service.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <div class="glass px-6 py-3 rounded-full">
+                    <span class="text-2xl font-bold" style="color: #d97706">⭐ 4.8</span>
+                    <span class="text-white/60 ml-2">Rating</span>
+                </div>
+                <div class="glass px-6 py-3 rounded-full">
+                    <span class="text-2xl font-bold" style="color: #d97706">5+</span>
+                    <span class="text-white/60 ml-2">Years</span>
+                </div>
+                <div class="glass px-6 py-3 rounded-full">
+                    <span class="text-2xl font-bold" style="color: #d97706">1000+</span>
+                    <span class="text-white/60 ml-2">Clients</span>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="px-10 py-4 rounded-full font-bold text-lg transition btn-glow" style="background: linear-gradient(135deg, #d97706, #b45309)">Get Appointment</a>
+                <a href="#gallery" class="px-10 py-4 rounded-full font-bold text-lg border-2 border-white/30 hover:bg-white/10 transition">View Gallery</a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-8 h-8 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" alt="Yaara - Multi Cuisine Restaurant" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 w-40 h-40 rounded-2xl flex items-center justify-center shadow-2xl" style="background: linear-gradient(135deg, #d97706, #b45309)">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold">4.8⭐</div>
+                            <div class="text-sm">Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: #d97706">About Us</p>
+                    <h2 class="text-4xl md:text-5xl font-bold heading mb-6">Welcome to <span style="color: #d97706">Yaara - Multi Cuisine Restaurant</span></h2>
+                    <p class="text-white/60 text-lg leading-relaxed mb-6">
+                        We are proud to be one of Guwahati's most trusted restaurant destinations. 
+                        Our commitment to excellence and customer satisfaction sets us apart.
+                    </p>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8">
+                        With years of experience and a team of dedicated professionals, 
+                        we ensure every visit is memorable. Experience the difference that 
+                        true quality makes.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl glass">
+                            <div class="text-2xl font-bold" style="color: #d97706">5+</div>
+                            <div class="text-white/60">Years Experience</div>
+                        </div>
+                        <div class="p-4 rounded-xl glass">
+                            <div class="text-2xl font-bold" style="color: #d97706">1000+</div>
+                            <div class="text-white/60">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-32 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: #d97706">What We Offer</p>
+                <h2 class="text-4xl md:text-5xl font-bold heading">Our Services</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #d97706, #b45309)">
+                <span class="text-3xl text-white">1</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Fine Dining</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #d97706, #b45309)">
+                <span class="text-3xl text-white">2</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Home Delivery</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #d97706, #b45309)">
+                <span class="text-3xl text-white">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Private Events</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #d97706, #b45309)">
+                <span class="text-3xl text-white">4</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Catering</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-32 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: #d97706">Our Space</p>
+                <h2 class="text-4xl md:text-5xl font-bold heading">Gallery</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                ['<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>']
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #d9770620, #b4530920)">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #d9770610, #b4530910)"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold heading mb-6">Ready to Experience the Best?</h2>
+            <p class="text-xl text-white/70 mb-8">Book your appointment today and discover why we're Guwahati's favorite restaurant.</p>
+            <a href="#contact" class="inline-block px-12 py-5 rounded-full font-bold text-lg transition btn-glow" style="background: linear-gradient(135deg, #d97706, #b45309)">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 px-6 bg-black">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: #d97706">Get in Touch</p>
+                <h2 class="text-4xl md:text-5xl font-bold heading">Book Appointment</h2>
+            </div>
+            <div class="rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #d97706, #b45309)">
+                <div class="p-10 md:p-16">
+                    <div class="grid md:grid-cols-2 gap-8 mb-10">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-2xl">📞</div>
+                            <div>
+                                <p class="text-white/60 text-sm">Phone</p>
+                                <p class="font-semibold text-lg">095081 50041</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-2xl">📍</div>
+                            <div>
+                                <p class="text-white/60 text-sm">Location</p>
+                                <p class="font-semibold text-lg">Guwahati, Assam</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919233073272?text=Hi, I'm interested in Yaara - Multi Cuisine Restaurant" class="block w-full bg-white text-center py-5 rounded-2xl font-bold text-lg hover:bg-gray-100 transition" style="color: #d97706">
+                        💬 Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 bg-gray-900 border-t border-white/10">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-2xl font-bold mb-2">Yaara - Multi Cuisine Restaurant</p>
+            <p class="text-white/40">© 2026 Yaara - Multi Cuisine Restaurant. Best restaurant in Guwahati.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-black/90');
+                nav.classList.remove('glass');
+            } else {
+                nav.classList.remove('bg-black/90');
+                nav.classList.add('glass');
+            }
+        });
+    </script>
+</body>
+</html>
