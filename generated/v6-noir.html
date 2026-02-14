@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOIR | Best Salon in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; }
+        .heading { font-family: 'Playfair Display', serif; }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 30px #db277740;
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 50px #db277760;
+            transform: translateY(-2px);
+        }
+        
+        .glass {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wider">NOIR</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-white/80 hover:text-white transition">Services</a>
+                <a href="#gallery" class="text-white/80 hover:text-white transition">Gallery</a>
+                <a href="#contact" class="px-6 py-2 rounded-full font-semibold transition btn-glow" style="background: linear-gradient(135deg, #db2777, #be185d)">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 rounded-full opacity-20" style="background: #db2777; filter: blur(100px);"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6">
+            <p class="text-sm md:text-base tracking-[0.3em] uppercase mb-4" style="color: #db2777">Style & Elegance</p>
+            <h1 class="text-6xl md:text-8xl font-bold heading mb-6 leading-tight">NOIR</h1>
+            <p class="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">Best salon services in Guwahati</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <div class="glass px-6 py-3 rounded-full">
+                    <span class="text-2xl font-bold" style="color: #db2777">⭐ 4.9</span>
+                    <span class="text-white/60 ml-2">Rating</span>
+                </div>
+            </div>
+            
+            <a href="#contact" class="px-10 py-4 rounded-full font-bold text-lg transition btn-glow" style="background: linear-gradient(135deg, #db2777, #be185d)">Book Appointment</a>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold heading">Our Services</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #db2777, #be185d)">
+                <span class="text-3xl text-white">1</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Hair Styling</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #db2777, #be185d)">
+                <span class="text-3xl text-white">2</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Hair Color</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #db2777, #be185d)">
+                <span class="text-3xl text-white">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Bridal Makeup</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+        <div class="group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/50">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #db2777, #be185d)">
+                <span class="text-3xl text-white">4</span>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-2">Spa</h3>
+            <p class="text-gray-500 text-center text-sm">Professional service</p>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-32 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold heading">Gallery</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                ['<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden group cursor-pointer">\n                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>']
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 bg-black">
+        <div class="max-w-4xl mx-auto">
+            <div class="rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #db2777, #be185d)">
+                <div class="p-10 md:p-16">
+                    <div class="grid md:grid-cols-2 gap-8 mb-10">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-2xl">📞</div>
+                            <div>
+                                <p class="font-semibold text-lg">070990 41227</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919233073272?text=Hi, I'm interested in NOIR" class="block w-full bg-white text-center py-5 rounded-2xl font-bold text-lg" style="color: #db2777">
+                        💬 Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 px-6 bg-gray-900 border-t border-white/10">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-2xl font-bold mb-2">NOIR</p>
+            <p class="text-white/40">© 2026 NOIR. Best Salon in Guwahati.</p>
+        </div>
+    </footer>
+</body>
+</html>
