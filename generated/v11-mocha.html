@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocha | Cafe in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { playfair: ['Playfair Display'], lato: ['Lato'] }, colors: { primary: '#8b5cf6', cream: '#fdf8f6' } } } }
+    </script>
+    <style>
+        body { font-family: 'Lato', sans-serif; background: #fdf8f6; color: #1f2937; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .hero-bg { background: linear-gradient(rgba(253,248,246,0.95), rgba(253,248,246,0.95)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200'); background-size: cover; }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-display text-2xl font-bold text-purple-700">Mocha</div>
+            <a href="#contact" class="px-5 py-2 bg-purple-600 text-white rounded-full text-sm font-semibold">Visit Us</a>
+        </div>
+    </nav>
+    <section class="hero-bg min-h-screen flex items-center">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-purple-600 uppercase tracking-widest text-sm mb-4">Cafe & Bar</p>
+            <h1 class="font-display text-7xl md:text-9xl font-bold mb-6 text-gray-900">Mocha</h1>
+            <p class="text-xl text-gray-600 mb-8">Coffees & Conversations</p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-purple-600 text-white rounded-full font-bold">Visit Us</a>
+            <div class="flex justify-center gap-12 mt-16">
+                <div><div class="font-display text-4xl text-purple-600">4.5⭐</div><div class="text-gray-500 text-sm">Rating</div></div>
+                <div><div class="font-display text-4xl text-purple-600">15+</div><div class="text-gray-500 text-sm">Years</div></div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div><p class="text-purple-600 uppercase tracking-widest text-sm mb-4">About</p><h2 class="font-display text-5xl font-bold mb-6">A Legacy of Coffee</h2><p class="text-gray-600 text-lg leading-relaxed">Mocha is one of Guwahati's most beloved cafes, serving exceptional coffee and delicious food for over 15 years.</p></div>
+            <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800" class="w-full h-full object-cover"></div>
+        </div>
+    </section>
+    <section id="contact" class="py-24 px-6 bg-purple-600">
+        <div class="max-w-2xl mx-auto text-center text-white">
+            <h2 class="font-display text-5xl font-bold mb-6">Visit Us</h2>
+            <p class="text-purple-100 text-lg mb-10">GS Rd, Guwahati</p>
+            <a href="https://wa.me/918486000401?text=Hi, interested in Mocha" class="inline-block px-12 py-5 bg-white text-purple-600 rounded-full font-bold text-lg">💬 WhatsApp</a>
+        </div>
+    </section>
+    <footer class="py-10 bg-gray-900 text-white text-center">
+        <div class="font-display text-2xl mb-2">Mocha</div><div class="text-gray-500">© 2026 Mocha | Guwahati</div>
+    </footer>
+</body>
+</html>

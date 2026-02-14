@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fat Belly | Chinese Restaurant in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { bebas: ['Bebas Neue'], poppins: ['Poppins'] }, colors: { red: '#dc2626', dark: '#0a0a0a' } } } }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: #fff; }
+        .font-display { font-family: 'Bebas Neue', sans-serif; }
+        .hero-bg { background: linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.95) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200'); background-size: cover; }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur border-b border-red-500/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-display text-3xl tracking-wider text-red-500">FAT BELLY</div>
+            <a href="#contact" class="px-5 py-2 bg-red-600 text-white rounded-full text-sm font-bold">Book Now</a>
+        </div>
+    </nav>
+    <section class="hero-bg min-h-screen flex items-center">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-red-400 uppercase tracking-[0.3em] text-sm mb-6">Authentic Chinese</p>
+            <h1 class="font-display text-8xl md:text-10xl text-red-500 leading-none">FAT BELLY</h1>
+            <p class="text-xl text-gray-300 mt-6 mb-8">Taste That Satisfies</p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-red-600 text-white rounded-full font-bold text-lg">Order Now</a>
+            <div class="flex justify-center gap-12 mt-16">
+                <div><div class="font-display text-5xl text-red-500">4.2⭐</div><div class="text-gray-400 text-sm">Rating</div></div>
+                <div><div class="font-display text-5xl text-red-500">10+</div><div class="text-gray-400 text-sm">Years</div></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-24 px-6 bg-red-600">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-display text-6xl mb-6">ORDER NOW</h2>
+            <p class="text-red-100 mb-10">Uzan Bazar, Guwahati</p>
+            <a href="https://wa.me/919864072727?text=Hi, I'd like to order from Fat Belly" class="inline-block px-12 py-5 bg-white text-red-600 rounded-full font-bold text-lg">💬 WhatsApp</a>
+        </div>
+    </section>
+    <footer class="py-10 bg-black text-center border-t border-red-500/20">
+        <div class="font-display text-3xl text-red-500">FAT BELLY</div><div class="text-gray-500">© 2026 Fat Belly | Guwahati</div>
+    </footer>
+</body>
+</html>

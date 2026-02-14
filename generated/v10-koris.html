@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kori's | Korean Restaurant in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { outfit: ['Outfit'], sora: ['Sora'] }, colors: { primary: '#f97316', dark: '#0a0a0a' } } } }
+    </script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; background: #0a0a0a; color: #fff; }
+        .font-display { font-family: 'Sora', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #f97316, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { box-shadow: 0 0 80px rgba(249,115,22,0.3); }
+        .card-hover { transition: all 0.4s; }
+        .card-hover:hover { transform: translateY(-8px); }
+        .hero-bg { background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.9) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200'); background-size: cover; }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-display text-2xl font-bold">Kori's</div>
+            <div class="hidden md:flex gap-8">
+                <a href="#about" class="hover:text-orange-400 transition">About</a>
+                <a href="#menu" class="hover:text-orange-400 transition">Menu</a>
+                <a href="#contact" class="px-5 py-2 bg-orange-500 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Book Table</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-bg min-h-screen flex items-center">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-orange-400 uppercase tracking-widest text-sm mb-4">Authentic Korean in Guwahati</p>
+            <h1 class="font-display text-7xl md:text-9xl font-extrabold mb-6">Kori's</h1>
+            <p class="text-xl text-gray-300 mb-8">Taste of Korea in Assam</p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-orange-500 rounded-full font-bold hover:bg-orange-600 transition glow">Reserve Table</a>
+            <div class="flex justify-center gap-12 mt-16">
+                <div><div class="font-display text-4xl gradient-text">4.3⭐</div><div class="text-gray-400 text-sm">Rating</div></div>
+                <div><div class="font-display text-4xl gradient-text">5+</div><div class="text-gray-400 text-sm">Years</div></div>
+                <div><div class="font-display text-4xl gradient-text">10K+</div><div class="text-gray-400 text-sm">Guests</div></div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-24 px-6 bg-zinc-900">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div><p class="text-orange-400 uppercase tracking-widest text-sm mb-4">About</p><h2 class="font-display text-5xl font-bold mb-6">Authentic Korean Flavors</h2><p class="text-gray-400 text-lg leading-relaxed">Since 2012, Kori's has been serving the most authentic Korean cuisine in Mainland India. Our chefs bring the true taste of Korea to Guwahati.</p></div>
+            <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" class="w-full h-full object-cover"></div>
+        </div>
+    </section>
+    <section id="menu" class="py-24 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-5xl text-center mb-12">Signature Dishes</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-hover bg-zinc-900 p-8 rounded-2xl"><h3 class="font-display text-xl mb-2">Bibimbap</h3><p class="text-gray-400">Classic Korean bowl</p></div>
+                <div class="card-hover bg-zinc-900 p-8 rounded-2xl"><h3 class="font-display text-xl mb-2">Kimchi</h3><p class="text-gray-400">Fermented perfection</p></div>
+                <div class="card-hover bg-zinc-900 p-8 rounded-2xl"><h3 class="font-display text-xl mb-2">Korean BBQ</h3><p class="text-gray-400">Grilled to perfection</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-24 px-6 bg-orange-600">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-display text-5xl font-bold mb-6">Book Now</h2>
+            <p class="text-orange-100 text-lg mb-10">Experience authentic Korean cuisine</p>
+            <a href="https://wa.me/919707997224?text=Hi, I'd like to book at Kori's" class="inline-block px-12 py-5 bg-black text-orange-500 rounded-full font-bold text-lg hover:bg-gray-900 transition">💬 WhatsApp</a>
+            <div class="grid grid-cols-2 gap-6 mt-12">
+                <div class="bg-orange-700 p-6 rounded-xl"><div class="text-orange-200 text-sm">Phone</div><div class="font-bold">9707997224</div></div>
+                <div class="bg-orange-700 p-6 rounded-xl"><div class="text-orange-200 text-sm">Address</div><div class="font-bold">Zoo Road, Guwahati</div></div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-10 bg-black text-center border-t border-zinc-800">
+        <div class="font-display text-2xl mb-2">Kori's</div><div class="text-gray-500">© 2026 Kori's | Guwahati</div>
+    </footer>
+</body>
+</html>
