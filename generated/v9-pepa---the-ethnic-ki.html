@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEPA - The Ethnic Kitchen | Premium restaurant in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Manrope', sans-serif; background: #0a0a0a; color: #fff; overflow-x: hidden; }
+        .italiana { font-family: 'Italiana', serif; }
+        
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.85) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200'); background-size: cover; background-position: center; }
+        
+        .hero-content { position: relative; z-index: 10; text-align: center; padding: 2rem; }
+        .hero-title { font-size: clamp(3.5rem, 12vw, 10rem); line-height: 1; margin-bottom: 1.5rem; }
+        .hero-subtitle { font-size: clamp(0.875rem, 1.5vw, 1.25rem); letter-spacing: 0.4em; text-transform: uppercase; opacity: 0.8; }
+        
+        .section { padding: 8rem 1.5rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        .reveal-text { opacity: 0; transform: translateY(40px); }
+        
+        .card-aos { background: #141414; border: 1px solid rgba(255,255,255,0.05); padding: 3rem; transition: all 0.5s ease; }
+        .card-aos:hover { border-color: #ea580c40; transform: translateY(-10px); }
+        
+        .image-wrap { overflow: hidden; }
+        .image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.5s ease; }
+        .image-wrap.revealed img { transform: scale(1); }
+        
+        .gradient-line { height: 1px; background: linear-gradient(90deg, transparent, #ea580c, transparent); }
+        
+        .cta-btn { display: inline-block; padding: 1.25rem 3rem; background: #ea580c; color: white; text-decoration: none; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.3s ease; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px #ea580c40; }
+        
+        @media (max-width: 768px) { .section { padding: 4rem 1rem; } }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="italiana hero-title">PEPA - The Ethnic Kitchen</h1>
+            <p class="hero-subtitle">Premium restaurant in Guwahati</p>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="py-6 bg-black overflow-hidden">
+        <div class="flex whitespace-nowrap animate-marquee">
+            <span class="text-lg mx-8" style="color: #ea580c">★ 4.6 Rating</span>
+            <span class="text-lg mx-8 text-white/50">•</span>
+            <span class="text-lg mx-8" style="color: #ea580c">5+ Years</span>
+            <span class="text-lg mx-8 text-white/50">•</span>
+            <span class="text-lg mx-8" style="color: #ea580c">1000+ Clients</span>
+            <span class="text-lg mx-8 text-white/50">•</span>
+            <span class="text-lg mx-8" style="color: #ea580c">Premium Service</span>
+            <span class="text-lg mx-8 text-white/50">•</span>
+            <span class="text-lg mx-8" style="color: #ea580c">★ 4.6 Rating</span>
+            <span class="text-lg mx-8 text-white/50">•</span>
+            <span class="text-lg mx-8" style="color: #ea580c">5+ Years</span>
+            <span class="text-lg mx-8 text-white/50">•</span>
+            <span class="text-lg mx-8" style="color: #ea580c">1000+ Clients</span>
+            <span class="text-lg mx-8 text-white/50">•</span>
+            <span class="text-lg mx-8" style="color: #ea580c">Premium Service</span>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="section bg-black">
+        <div class="container">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="image-wrap aspect-[4/5] rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" alt="PEPA - The Ethnic Kitchen" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-sm uppercase tracking-widest mb-4" style="color: #ea580c">About</p>
+                    <h2 class="italiana text-4xl md:text-5xl mb-6">Experience Excellence</h2>
+                    <p class="text-white/50 text-lg leading-relaxed mb-4">
+                        Welcome to PEPA - The Ethnic Kitchen - Guwahati's premier destination for premium restaurant. 
+                        We combine exceptional service with unforgettable experiences.
+                    </p>
+                    <p class="text-white/50 text-lg leading-relaxed">
+                        Our commitment to excellence has made us a trusted name in the industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" style="background: #0d0d0d">
+        <div class="container">
+            <div class="text-center mb-12">
+                <p class="text-sm uppercase tracking-widest mb-4" style="color: #ea580c">Services</p>
+                <h2 class="italiana text-4xl md:text-5xl">What We Offer</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-aos rounded-sm">
+                    <h3 class="italiana text-2xl mb-3">Premium</h3>
+                    <p class="text-white/50">Best in class service</p>
+                </div>
+                <div class="card-aos rounded-sm">
+                    <h3 class="italiana text-2xl mb-3">Professional</h3>
+                    <p class="text-white/50">Expert team</p>
+                </div>
+                <div class="card-aos rounded-sm">
+                    <h3 class="italiana text-2xl mb-3">Exclusive</h3>
+                    <p class="text-white/50">Memorable experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="background: linear-gradient(135deg, #ea580c15, #0a0a0a)">
+        <div class="container text-center">
+            <h2 class="italiana text-4xl md:text-5xl mb-4">Book Now</h2>
+            <p class="text-white/50 text-lg mb-8">Experience the best restaurant in Guwahati</p>
+            <a href="https://wa.me/919233073272?text=Hi, interested in PEPA - The Ethnic Kitchen" class="cta-btn">WhatsApp Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black text-center">
+        <div class="gradient-line max-w-xl mx-auto mb-8"></div>
+        <h2 class="italiana text-2xl mb-2">PEPA - The Ethnic Kitchen</h2>
+        <p class="text-white/30">© 2026 PEPA - The Ethnic Kitchen | Guwahati, Assam</p>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.from('.hero-title', { y: 50, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.2 });
+        gsap.from('.hero-subtitle', { y: 20, opacity: 0, duration: 1, delay: 0.8 });
+        
+        gsap.utils.toArray('.image-wrap').forEach(el => {
+            gsap.to(el, {
+                scrollTrigger: { trigger: el, start: 'top 80%' },
+                onEnter: () => el.classList.add('revealed'),
+                duration: 1.5
+            });
+        });
+    </script>
+</body>
+</html>
