@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guwahati Heights | Premium Restaurant in Guwahati</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        sora: ['Sora', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#f97316',
+                        surface: '#0f0f0f',
+                        elevated: '#1a1a1a',
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; background: #0f0f0f; color: #fff; }
+        
+        .font-display { font-family: 'Sora', sans-serif; }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #f97316, #fb923c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .glow { box-shadow: 0 0 80px rgba(249, 115, 22, 0.15); }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(15,15,15,0) 0%, rgba(15,15,15,0.8) 50%, rgba(15,15,15,1) 100%),
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-blur {
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-300 { animation-delay: 0.3s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f0f0f; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="font-display text-xl font-bold tracking-tight">Guwahati Heights</a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-sm text-white/60 hover:text-white transition">About</a>
+                <a href="#menu" class="text-sm text-white/60 hover:text-white transition">Menu</a>
+                <a href="#gallery" class="text-sm text-white/60 hover:text-white transition">Gallery</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-primary text-white hover:bg-orange-600 transition glow">
+                    Book Table
+                </a>
+            </div>
+            
+            <button class="md:hidden p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0f0f0f]"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 opacity-0 animate-fade-up">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-sm text-white/70">Premium Dining in Guwahati</span>
+            </div>
+            
+            <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-extrabold mb-6 leading-tight opacity-0 animate-fade-up animate-delay-100">
+                Guwahati Heights
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-white/50 mb-4 opacity-0 animate-fade-up animate-delay-200">
+                Where Every Meal Becomes a Memory
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10 opacity-0 animate-fade-up animate-delay-300">
+                <a href="#contact" class="px-8 py-4 rounded-full font-semibold bg-primary text-white hover:bg-orange-600 transition glow">
+                    Reserve a Table
+                </a>
+                <a href="#menu" class="px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/10 transition">
+                    View Menu
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 mt-16 opacity-0 animate-fade-up animate-delay-400">
+                <div class="text-center">
+                    <div class="font-display text-4xl md:text-5xl font-bold gradient-text">4.7⭐</div>
+                    <div class="text-white/40 text-sm mt-1">Rating</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-4xl md:text-5xl font-bold gradient-text">5+</div>
+                    <div class="text-white/40 text-sm mt-1">Years</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-4xl md:text-5xl font-bold gradient-text">10K+</div>
+                    <div class="text-white/40 text-sm mt-1">Happy Guests</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-white/30"></i>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 md:py-32 px-6 bg-surface">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" 
+                             alt="Guwahati Heights" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 p-6 rounded-2xl bg-primary glow">
+                        <div class="font-display text-3xl font-bold">4.7⭐</div>
+                        <div class="text-white/70 text-sm">Rating</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-4">About Us</div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                        A Legacy of <span class="gradient-text">Excellence</span>
+                    </h2>
+                    <p class="text-white/50 text-lg leading-relaxed mb-6">
+                        Welcome to Guwahati Heights — Guwahati's premier dining destination. Since our inception, 
+                        we've been committed to delivering an unparalleled culinary experience that tantalizes 
+                        the senses and warms the soul.
+                    </p>
+                    <p class="text-white/50 text-lg leading-relaxed mb-8">
+                        Our chefs craft each dish with passion, using only the freshest locally-sourced 
+                        ingredients to create flavors that linger long after your meal ends.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card-hover glass p-5 rounded-2xl">
+                            <i data-lucide="utensils" class="w-8 h-8 text-primary mb-3"></i>
+                            <div class="font-semibold">Fine Dining</div>
+                            <div class="text-white/40 text-sm">Premium ambiance</div>
+                        </div>
+                        <div class="card-hover glass p-5 rounded-2xl">
+                            <i data-lucide="wine" class="w-8 h-8 text-primary mb-3"></i>
+                            <div class="font-semibold">Premium Bar</div>
+                            <div class="text-white/40 text-sm">Curated drinks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview -->
+    <section id="menu" class="py-24 md:py-32 px-6 bg-elevated">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Our Menu</div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold">Signature Dishes</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-hover glass rounded-3xl overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" 
+                             class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-semibold mb-2">Chef's Special</h3>
+                        <p class="text-white/50 text-sm">Handcrafted signature dish</p>
+                    </div>
+                </div>
+                <div class="card-hover glass rounded-3xl overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600" 
+                             class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-semibold mb-2">Grilled Delights</h<p class="text-white/50 text3>
+                        -sm">Perfectly seasoned & cooked</p>
+                    </div>
+                </div>
+                <div class="card-hover glass rounded-3xl overflow-hidden">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" 
+                             class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-semibold mb-2">Fresh Pizza</h3>
+                        <p class="text-white/50 text-sm">Wood-fired perfection</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                    View Full Menu <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 md:py-32 px-6 bg-surface">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Gallery</div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold">Our Space</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800" 
+                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" 
+                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" 
+                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=400" 
+                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400" 
+                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-24 md:py-32 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="font-display text-4xl md:text-6xl font-bold mb-6">
+                Reserve Your <span class="gradient-text">Experience</span>
+            </h2>
+            <p class="text-white/50 text-xl mb-10">
+                Book your table today and discover why we're Guwahati's favorite dining destination.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/919233073272?text=Hi, I'd like to book a table at Guwahati Heights" 
+                   class="px-10 py-5 rounded-full font-bold bg-primary text-white hover:bg-orange-600 transition glow text-lg">
+                    💬 Book via WhatsApp
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16">
+                <div class="glass p-6 rounded-2xl">
+                    <i data-lucide="map-pin" class="w-8 h-8 text-primary mx-auto mb-3"></i>
+                    <div class="font-semibold">Location</div>
+                    <div class="text-white/50 text-sm">Guwahati, Assam</div>
+                </div>
+                <div class="glass p-6 rounded-2xl">
+                    <i data-lucide="phone" class="w-8 h-8 text-primary mx-auto mb-3"></i>
+                    <div class="font-semibold">Phone</div>
+                    <div class="text-white/50 text-sm">060017 45969</div>
+                </div>
+                <div class="glass p-6 rounded-2xl">
+                    <i data-lucide="clock" class="w-8 h-8 text-primary mx-auto mb-3"></i>
+                    <div class="font-semibold">Hours</div>
+                    <div class="text-white/50 text-sm">11AM - 11PM</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="font-display text-2xl font-bold mb-4">Guwahati Heights</div>
+            <div class="text-white/30">© 2026 Guwahati Heights | Guwahati, Assam</div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-up');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('section').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
