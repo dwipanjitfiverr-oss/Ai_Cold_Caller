@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaara | Best Restaurant in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { bebas: ['Bebas Neue', sans-serif], poppins: ['Poppins', sans-serif] },
+                    colors: { amber: '#f59e0b', dark: '#0f0f0f' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #0f0f0f; color: #fff; }
+        .font-display { font-family: 'Bebas Neue', sans-serif; }
+        .vibrant-card { background: linear-gradient(135deg, #1a1a1a, #252525); border: 1px solid #333; transition: all 0.3s; }
+        .vibrant-card:hover { border-color: #f59e0b; transform: scale(1.02); }
+        .hero-vibrant { background: linear-gradient(180deg, rgba(15,15,15,0.7) 0%, rgba(15,15,15,0.95) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200'); background-size: cover; background-position: center; }
+        .accent { color: #f59e0b; }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-display text-3xl tracking-wider accent">Yaara</div>
+            <div class="hidden md:flex gap-8 text-sm">
+                <a href="#about" class="hover:text-amber-400 transition">About</a>
+                <a href="#menu" class="hover:text-amber-400 transition">Menu</a>
+                <a href="#contact" class="px-5 py-2 bg-amber-500 text-black rounded text-sm font-bold hover:bg-amber-400 transition">Book Table</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-vibrant min-h-screen flex items-center">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-4">Best Restaurant in Guwahati</p>
+            <h1 class="font-display text-7xl md:text-10xl mb-6 leading-none">Yaara</h1>
+            <p class="text-xl text-gray-300 mb-8">Taste That Defines Excellence</p>
+            <a href="#contact" class="inline-block px-10 py-5 bg-amber-500 text-black font-bold text-lg hover:bg-amber-400 transition">Reserve Now</a>
+            <div class="flex justify-center gap-16 mt-16">
+                <div><div class="font-display text-5xl accent">4.7⭐</div><div class="text-gray-400 text-sm">Rating</div></div>
+                <div><div class="font-display text-5xl">5+</div><div class="text-gray-400 text-sm">Years</div></div>
+                <div><div class="font-display text-5xl">10K+</div><div class="text-gray-400 text-sm">Guests</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" alt="Yaara" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-amber-400 uppercase tracking-widest text-sm mb-4">About Us</p>
+                <h2 class="font-display text-5xl mb-6">FLAVORS OF <span class="accent">PASSION</span></h2>
+                <p class="text-gray-400 text-lg mb-6">Welcome to Yaara — where every dish tells a story. We serve culinary experiences that ignite the senses.</p>
+                <p class="text-gray-400 text-lg">Fresh ingredients, expert chefs, unforgettable moments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-24 px-6 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-amber-400 uppercase tracking-widest text-sm mb-4">Menu</p>
+                <h2 class="font-display text-5xl">SIGNATURE DISHES</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="vibrant-card p-6 rounded-2xl"><h3 class="font-display text-2xl mb-2 accent">Chef's Special</h3><p class="text-gray-400">Signature dish</p></div>
+                <div class="vibrant-card p-6 rounded-2xl"><h3 class="font-display text-2xl mb-2 accent">Grilled</h3><p class="text-gray-400">Perfectly cooked</p></div>
+                <div class="vibrant-card p-6 rounded-2xl"><h3 class="font-display text-2xl mb-2 accent">Fresh</h3><p class="text-gray-400">Local ingredients</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-amber-500">
+        <div class="max-w-2xl mx-auto text-center text-black">
+            <h2 class="font-display text-5xl mb-6">RESERVE NOW</h2>
+            <p class="text-black/70 text-lg mb-10">Book your table today!</p>
+            <a href="https://wa.me/919233073272?text=Hi, I'd like to book at Yaara" class="inline-block px-10 py-5 bg-black text-amber-400 font-bold text-lg hover:bg-gray-900 transition">💬 WhatsApp</a>
+            <div class="grid grid-cols-2 gap-6 mt-12">
+                <div class="bg-black/10 p-6 rounded-xl"><div class="text-black/60 text-sm">Phone</div><div class="font-bold">095081 50041</div></div>
+                <div class="bg-black/10 p-6 rounded-xl"><div class="text-black/60 text-sm">Address</div><div class="font-bold">Ulubari, Guwahati</div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 px-6 bg-black text-center">
+        <div class="font-display text-2xl accent mb-2">Yaara</div>
+        <div class="text-gray-500">© 2026 Yaara | Guwahati, Assam</div>
+    </footer>
+</body>
+</html>
