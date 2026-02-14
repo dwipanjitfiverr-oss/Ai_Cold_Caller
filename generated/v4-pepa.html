@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEPA | Fine Dining in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { cormorant: ['Cormorant Garamond', serif], montserrat: ['Montserrat', sans-serif] },
+                    colors: { gold: '#d4af37', dark: '#0c0c0c' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background: #0c0c0c; color: #f5f5f5; }
+        .font-display { font-family: 'Cormorant Garamond', serif; }
+        .gold-text { background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gold-border { border-color: #d4af37; }
+        .gold-bg { background: linear-gradient(135deg, #d4af37, #b8962e); }
+        .gold-glow { box-shadow: 0 0 60px rgba(212, 175, 55, 0.3); }
+        .luxury-card { background: linear-gradient(180deg, #1a1a1a, #0c0c0c); border: 1px solid #2a2a2a; transition: all 0.4s; }
+        .luxury-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+        .hero-luxury { background: linear-gradient(180deg, rgba(12,12,12,0.3) 0%, rgba(12,12,12,0.9) 100%), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200'); background-size: cover; background-position: center; }
+        .pattern { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    </style>
+</head>
+<body class="pattern">
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur border-b border-[#2a2a2a]">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="font-display text-3xl font-semibold gold-text tracking-wider">PEPA</div>
+            <div class="hidden md:flex items-center gap-10 text-sm tracking-widest">
+                <a href="#about" class="text-gray-400 hover:text-[#d4af37] transition uppercase text-xs">About</a>
+                <a href="#menu" class="text-gray-400 hover:text-[#d4af37] transition uppercase text-xs">Menu</a>
+                <a href="#gallery" class="text-gray-400 hover:text-[#d4af37] transition uppercase text-xs">Gallery</a>
+                <a href="#contact" class="px-6 py-2.5 gold-bg text-black font-semibold uppercase text-xs tracking-widest hover:opacity-90 transition">Reserve</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-luxury min-h-screen flex items-center justify-center">
+        <div class="text-center px-6">
+            <p class="text-[#d4af37] uppercase tracking-[0.5em] text-xs mb-6 font-medium">Fine Dining • Guwahati</p>
+            <h1 class="font-display text-7xl md:text-9xl font-medium mb-8 gold-text">PEPA</h1>
+            <p class="text-gray-300 text-lg tracking-wide mb-12 font-light">Where Tradition Meets Taste</p>
+            <a href="#contact" class="inline-block px-10 py-4 gold-bg text-black font-semibold uppercase tracking-widest text-sm hover:gold-glow transition">Reserve Your Table</a>
+            
+            <div class="flex justify-center gap-16 mt-20">
+                <div class="text-center">
+                    <div class="font-display text-4xl gold-text">4.6⭐</div>
+                    <div class="text-gray-500 text-xs uppercase tracking-widest mt-2">Rating</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-4xl gold-text">5+</div>
+                    <div class="text-gray-500 text-xs uppercase tracking-widest mt-2">Years</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-4xl gold-text">10K+</div>
+                    <div class="text-gray-500 text-xs uppercase tracking-widest mt-2">Guests</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-28 px-6 bg-[#0c0c0c]">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border border-[#d4af37]/30 rounded-sm"></div>
+                    <div class="aspect-[4/5] rounded-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" alt="PEPA" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[#d4af37] uppercase tracking-[0.3em] text-xs mb-4">Our Story</p>
+                    <h2 class="font-display text-5xl md:text-6xl font-medium mb-8 gold-text">A Culinary <br/>Journey</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6 font-light">
+                        Welcome to PEPA — a celebration of authentic flavors and culinary artistry. 
+                        Nestled in the heart of Guwahati, we bring you a dining experience that transcends ordinary meals.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed mb-10 font-light">
+                        Every dish is crafted with passion, using time-honored recipes and the finest ingredients.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="luxury-card p-5 rounded-sm flex-1 text-center">
+                            <div class="font-display text-2xl gold-text">15+</div>
+                            <div class="text-gray-500 text-xs uppercase tracking-widest mt-1">Dishes</div>
+                        </div>
+                        <div class="luxury-card p-5 rounded-sm flex-1 text-center">
+                            <div class="font-display text-2xl gold-text">3</div>
+                            <div class="text-gray-500 text-xs uppercase tracking-widest mt-1">Chefs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-28 px-6 bg-[#0a0a0a]">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-20">
+                <p class="text-[#d4af37] uppercase tracking-[0.3em] text-xs mb-4">Menu</p>
+                <h2 class="font-display text-5xl md:text-6xl font-medium gold-text">Signature Creations</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="luxury-card p-8 rounded-sm">
+                    <div class="flex justify-between items-baseline mb-3">
+                        <h3 class="font-display text-2xl">Signature Platter</h3>
+                        <span class="text-[#d4af37] font-semibold">₹450</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Chef's special selection</p>
+                </div>
+                <div class="luxury-card p-8 rounded-sm">
+                    <div class="flex justify-between items-baseline mb-3">
+                        <h3 class="font-display text-2xl">Grilled Special</h3>
+                        <span class="text-[#d4af37] font-semibold">₹380</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Premium quality</p>
+                </div>
+                <div class="luxury-card p-8 rounded-sm">
+                    <div class="flex justify-between items-baseline mb-3">
+                        <h3 class="font-display text-2xl">Curry Royale</h3>
+                        <span class="text-[#d4af37] font-semibold">₹320</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Traditional recipe</p>
+                </div>
+                <div class="luxury-card p-8 rounded-sm">
+                    <div class="flex justify-between items-baseline mb-3">
+                        <h3 class="font-display text-2xl">Beverage Collection</h3>
+                        <span class="text-[#d4af37] font-semibold">₹150</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Refreshing drinks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-28 px-6 bg-[#0c0c0c]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <p class="text-[#d4af37] uppercase tracking-[0.3em] text-xs mb-4">Gallery</p>
+                <h2 class="font-display text-5xl md:text-6xl font-medium gold-text">Our Space</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="aspect-square rounded-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover hover:scale-110 transition duration-700"></div>
+                <div class="col-span-2 aspect-square rounded-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover hover:scale-110 transition duration-700"></div>
+                <div class="col-span-2 aspect-square rounded-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover hover:scale-110 transition duration-700"></div>
+                <div class="aspect-square rounded-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover hover:scale-110 transition duration-700"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-28 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0c0c0c] to-[#1a1a1a]"></div>
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <p class="text-[#d4af37] uppercase tracking-[0.3em] text-xs mb-4">Reservations</p>
+            <h2 class="font-display text-5xl md:text-6xl font-medium gold-text mb-6">Book Your Experience</h2>
+            <p class="text-gray-400 mb-12 font-light">Join us for an unforgettable dining experience.</p>
+            <a href="https://wa.me/919233073272?text=Hi, I'd like to reserve a table at PEPA" class="inline-block px-12 py-5 gold-bg text-black font-semibold uppercase tracking-widest text-sm hover:gold-glow transition">💬 Reserve via WhatsApp</a>
+            <div class="grid grid-cols-2 gap-6 mt-16">
+                <div class="luxury-card p-8 rounded-sm">
+                    <div class="text-gray-500 text-xs uppercase tracking-widest mb-2">Phone</div>
+                    <div class="text-xl font-medium">096610 91070</div>
+                </div>
+                <div class="luxury-card p-8 rounded-sm">
+                    <div class="text-gray-500 text-xs uppercase tracking-widest mb-2">Address</div>
+                    <div class="text-xl font-medium">Zoo Rd, Guwahati</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-[#2a2a2a]">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="font-display text-3xl gold-text mb-4">PEPA</div>
+            <div class="text-gray-600 text-sm tracking-wider">© 2026 PEPA | Guwahati, Assam</div>
+        </div>
+    </footer>
+</body>
+</html>
