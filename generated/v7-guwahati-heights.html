@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guwahati Heights | Best restaurant in Guwahati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { scroll-behavior: smooth; }
+        
+        :root {
+            --primary: #f59e0b;
+            --secondary: #d97706;
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --text: #fafafa;
+            --text-muted: #a1a1a1;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        
+        .display {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+        }
+        
+        .hero {
+            background: linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,1) 100%),
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow { box-shadow: 0 0 60px #f59e0b30; }
+        
+        .card {
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card:hover {
+            border-color: #f59e0b40;
+            transform: translateY(-8px);
+        }
+        
+        .mesh {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.15;
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.15; }
+            50% { transform: scale(1.1); opacity: 0.25; }
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        @keyframes reveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .reveal-1 { animation-delay: 0.1s; }
+        .reveal-2 { animation-delay: 0.2s; }
+        .reveal-3 { animation-delay: 0.3s; }
+        .reveal-4 { animation-delay: 0.4s; }
+        
+        .noise {
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="relative">
+    <div class="noise"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="display text-2xl tracking-tight">Guwahati Heights</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-sm text-white/60 hover:text-white transition">About</a>
+                <a href="#services" class="text-sm text-white/60 hover:text-white transition">Services</a>
+                <a href="#gallery" class="text-sm text-white/60 hover:text-white transition">Gallery</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full text-sm font-semibold transition glow" style="background: linear-gradient(135deg, var(--primary), var(--secondary))">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="mesh" style="background: #f59e0b; top: -10%; left: -10%;"></div>
+        <div class="mesh" style="background: #d97706; bottom: -10%; right: -10%;"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <div class="reveal reveal-1 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
+                <span class="w-2 h-2 rounded-full" style="background: #f59e0b"></span>
+                <span class="text-sm text-white/70">Best restaurant in Guwahati</span>
+            </div>
+            
+            <h1 class="reveal reveal-2 display text-7xl md:text-9xl mb-6 leading-[0.9]">
+                Guwahati Heights
+            </h1>
+            
+            <p class="reveal reveal-3 text-xl md:text-2xl text-white/60 mb-12 max-w-2xl mx-auto">
+                Experience restaurant excellence in Guwahati. Premium services, unforgettable moments.
+            </p>
+            
+            <div class="reveal reveal-4 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="px-8 py-4 rounded-full font-bold text-lg transition glow" style="background: linear-gradient(135deg, var(--primary), var(--secondary))">
+                    Book Appointment
+                </a>
+                <a href="#gallery" class="px-8 py-4 rounded-full font-semibold text-lg border border-white/20 hover:bg-white/10 transition">
+                    View Gallery
+                </a>
+            </div>
+            
+            <div class="reveal reveal-4 mt-16 flex justify-center gap-12">
+                <div class="text-center">
+                    <div class="display text-4xl gradient-text">4.7⭐</div>
+                    <div class="text-white/40 text-sm mt-1">Rating</div>
+                </div>
+                <div class="text-center">
+                    <div class="display text-4xl gradient-text">5+</div>
+                    <div class="text-white/40 text-sm mt-1">Years</div>
+                </div>
+                <div class="text-center">
+                    <div class="display text-4xl gradient-text">1000+</div>
+                    <div class="text-white/40 text-sm mt-1">Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-32 px-6 bg-black relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" alt="Guwahati Heights" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 p-6 rounded-2xl" style="background: linear-gradient(135deg, var(--primary), var(--secondary))">
+                        <div class="display text-4xl">4.7⭐</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: #f59e0b">About Us</div>
+                    <h2 class="display text-4xl md:text-5xl mb-6">Welcome to <span class="gradient-text">Guwahati Heights</span></h2>
+                    <p class="text-white/50 text-lg leading-relaxed mb-6">
+                        We are Guwahati's premier destination for restaurant. Our commitment to excellence 
+                        and passion for perfection set us apart.
+                    </p>
+                    <p class="text-white/50 text-lg leading-relaxed mb-8">
+                        With years of experience and a dedicated team, we ensure every visit is exceptional. 
+                        Discover the difference of true quality.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card p-5 rounded-xl">
+                            <div class="display text-2xl gradient-text">5+</div>
+                            <div class="text-white/40 text-sm">Years Experience</div>
+                        </div>
+                        <div class="card p-5 rounded-xl">
+                            <div class="display text-2xl gradient-text">1000+</div>
+                            <div class="text-white/40 text-sm">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-32 px-6" style="background: var(--surface)">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: #f59e0b">What We Offer</div>
+                <h2 class="display text-4xl md:text-5xl">Our Services</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #f59e0b20, #d9770620)">
+                        <span class="text-2xl" style="color: #f59e0b">✦</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Premium Service</h3>
+                    <p class="text-white/50">Experience excellence in every detail</p>
+                </div>
+                <div class="card p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #f59e0b20, #d9770620)">
+                        <span class="text-2xl" style="color: #f59e0b">✦</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Expert Team</h3>
+                    <p class="text-white/50">Professional & skilled staff</p>
+                </div>
+                <div class="card p-8 rounded-2xl">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #f59e0b20, #d9770620)">
+                        <span class="text-2xl" style="color: #f59e0b">✦</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Best Experience</h3>
+                    <p class="text-white/50">Memorable visits every time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-32 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: #f59e0b">Our Space</div>
+                <h2 class="display text-4xl md:text-5xl">Gallery</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                ['<div class="aspect-square rounded-2xl overflow-hidden cursor-pointer group">\n                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden cursor-pointer group">\n                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden cursor-pointer group">\n                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden cursor-pointer group">\n                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden cursor-pointer group">\n                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>', '<div class="aspect-square rounded-2xl overflow-hidden cursor-pointer group">\n                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">\n                </div>']
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-6 relative overflow-hidden">
+        <div class="mesh" style="background: #f59e0b; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="display text-4xl md:text-6xl mb-6">Ready to Experience the Best?</h2>
+            <p class="text-white/60 text-xl mb-10">Book your appointment now and discover why we're Guwahati's favorite restaurant.</p>
+            <a href="#contact" class="inline-block px-10 py-5 rounded-full font-bold text-lg transition glow" style="background: linear-gradient(135deg, var(--primary), var(--secondary))">
+                Book Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 px-6 bg-black">
+        <div class="max-w-4xl mx-auto">
+            <div class="rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #f59e0b, #d97706)">
+                <div class="p-10 md:p-16">
+                    <h2 class="display text-3xl md:text-4xl mb-8 text-center">Book Your Appointment</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center gap-4 bg-white/10 p-5 rounded-xl">
+                            <div class="text-2xl">📞</div>
+                            <div>
+                                <div class="text-sm opacity-70">Phone</div>
+                                <div class="font-semibold">060017 45969</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/10 p-5 rounded-xl">
+                            <div class="text-2xl">📍</div>
+                            <div>
+                                <div class="text-sm opacity-70">Location</div>
+                                <div class="font-semibold">Guwahati, Assam</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919233073272?text=Hi, I'm interested in Guwahati Heights" class="block w-full bg-white text-center py-5 rounded-xl font-bold text-lg hover:bg-gray-100 transition" style="color: #f59e0b">
+                        💬 Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="display text-2xl mb-2">Guwahati Heights</div>
+            <div class="text-white/30">© 2026 Guwahati Heights. Best restaurant in Guwahati.</div>
+        </div>
+    </footer>
+</body>
+</html>
