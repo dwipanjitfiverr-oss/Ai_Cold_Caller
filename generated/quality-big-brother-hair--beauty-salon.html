@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Brother Hair & Beauty Salon - Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .hero { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .floating { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-10px); 
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-purple-600">Big Brother Hair & Beauty Salon</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600">About</a>
+                    <a href="#menu" class="text-gray-700 hover:text-purple-600">Menu</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600">Contact</a>
+                </div>
+                <a href="https://wa.me/919233073272?text=I'm interested in a website" 
+                   class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition flex items-center gap-2">
+                    <span>💬</span> WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="text-center text-white px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 floating">
+                Welcome to Big Brother Hair & Beauty Salon
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                1628-29 1620-29, Main Bazar Rd, Main Bazar, Aram Bagh, Pahar
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg transition">
+                    View Menu
+                </a>
+                <a href="tel:089293 24762" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">
+                    📞 Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">About Us</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Welcome to <strong>Big Brother Hair & Beauty Salon</strong>! We are dedicated to serving 
+                the best quality food and excellent service to our valued customers.
+                We are a premium salons in Delhi with 4.7⭐ rating. Quality service guaranteed!
+            </p>
+            <div class="grid grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-purple-600">⭐ 4.7</div>
+                    <div class="text-gray-600">Rating</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-purple-600">10+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-purple-600">10000+</div>
+                    <div class="text-gray-600">Happy Customers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow"><p class="text-gray-600">"Excellent service!"</p></div><div class="bg-white p-6 rounded-xl shadow"><p class="text-gray-600">"Highly recommended!"</p></div><div class="bg-white p-6 rounded-xl shadow"><p class="text-gray-600">"Best in Delhi!"</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Popular Items</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <span class="text-6xl">🍛</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Signature Dishes</h3>
+                        <p class="text-gray-600">Try our special recipes made with love</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+                        <span class="text-6xl">🥗</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Fresh & Healthy</h3>
+                        <p class="text-gray-600">Healthy options for conscious eaters</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
+                        <span class="text-6xl">🍜</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Specialty Items</h3>
+                        <p class="text-gray-600">Chef's special recommendations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">📍 Address</h3>
+                    <p class="text-gray-600">1628-29 1620-29, Main Bazar Rd, Main Bazar, Aram Bagh, Pahar</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">📞 Phone</h3>
+                    <p class="text-gray-600"><a href="tel:089293 24762" class="text-purple-600">089293 24762</a></p>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="https://wa.me/919233073272?text=Hi, I'm interested in getting a professional website for Big Brother Hair & Beauty Salon" 
+                   class="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition text-lg">
+                    <span>💬</span> Get Your Own Website - Starting ₹5,000
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2026 Big Brother Hair & Beauty Salon. All rights reserved.</p>
+            <p class="text-gray-500 mt-2">Powered by Jarvis AI</p>
+        </div>
+    </footer>
+</body>
+</html>
