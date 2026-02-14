@@ -26,12 +26,12 @@
         body { font-family: 'Outfit', sans-serif; background: #0f0f0f; color: #fff; }
         .font-display { font-family: 'Sora', sans-serif; }
         .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
-        .gradient-text { background: linear-gradient(135deg, #f472b6, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glow { box-shadow: 0 0 80px #f472b625; }
+        .gradient-text { background: linear-gradient(135deg, #f472b6, #f9a8d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { box-shadow: 0 0 80px rgba(244, 114, 182, 0.25); }
         .card-hover { transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
         .card-hover:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
-        .hero-bg { background: linear-gradient(180deg,rgba(15,15,15,0) 0%,rgba(15,15,15,0.8) 50%,#0f0f0f 100%),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200'); background-size: cover; background-position: center; }
-        .nav-blur { background: rgba(15,15,15,0.8); backdrop-filter: blur(20px); }
+        .hero-bg { background: linear-gradient(180deg,rgba(15,15,15,0) 0%,rgba(15,15,15,0.85) 50%,#0f0f0f 100%),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200'); background-size: cover; background-position: center; }
+        .nav-blur { background: rgba(15,15,15,0.85); backdrop-filter: blur(20px); }
         .animate-delay-100 { animation-delay: 0.1s; } .animate-delay-200 { animation-delay: 0.2s; } .animate-delay-300 { animation-delay: 0.3s; }
         .animate-fade-up { opacity: 0; animation: fadeUp 0.8s ease-out forwards; }
         ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #0f0f0f; } ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
@@ -44,6 +44,7 @@
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-sm text-white/60 hover:text-white transition">About</a>
                 <a href="#services" class="text-sm text-white/60 hover:text-white transition">Services</a>
+                <a href="#gallery" class="text-sm text-white/60 hover:text-white transition">Gallery</a>
                 <a href="#contact" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-primary text-white hover:brightness-110 transition glow">Book Now</a>
             </div>
         </div>
@@ -57,14 +58,14 @@
                 <span class="text-sm text-white/70">Premium Salon in Guwahati</span>
             </div>
             <h1 class="font-display text-6xl md:text-8xl font-extrabold mb-6 leading-tight animate-fade-up animate-delay-100">NOIR</h1>
-            <p class="text-xl text-white/50 mb-4 animate-fade-up animate-delay-200">Salon Excellence in Guwahati</p>
+            <p class="text-xl text-white/50 mb-4 animate-fade-up animate-delay-200">Transform Your Look, Elevate Your Confidence</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10 animate-fade-up animate-delay-300">
-                <a href="#contact" class="px-8 py-4 rounded-full font-semibold bg-primary text-white hover:brightness-110 transition glow">Book Now</a>
+                <a href="#contact" class="px-8 py-4 rounded-full font-semibold bg-primary text-white hover:brightness-110 transition glow">Book Appointment</a>
             </div>
             <div class="flex justify-center gap-8 md:gap-16 mt-16 animate-fade-up animate-delay-300">
                 <div class="text-center"><div class="font-display text-4xl font-bold gradient-text">4.9⭐</div><div class="text-white/40 text-sm">Rating</div></div>
                 <div class="text-center"><div class="font-display text-4xl font-bold gradient-text">5+</div><div class="text-white/40 text-sm">Years</div></div>
-                <div class="text-center"><div class="font-display text-4xl font-bold gradient-text">10K+</div><div class="text-white/40 text-sm">Clients</div></div>
+                <div class="text-center"><div class="font-display text-4xl font-bold gradient-text">5K+</div><div class="text-white/40 text-sm">Clients</div></div>
             </div>
         </div>
     </section>
@@ -73,15 +74,16 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="aspect-[4/5] rounded-3xl overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200" alt="NOIR" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200" alt="NOIR Salon" class="w-full h-full object-cover">
                 </div>
                 <div>
-                    <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-4">About</div>
-                    <h2 class="font-display text-4xl font-bold mb-6">Experience <span class="gradient-text">Excellence</span></h2>
-                    <p class="text-white/50 text-lg mb-6">Welcome to NOIR — Guwahati's premier salon. We deliver unparalleled service that exceeds expectations.</p>
-                    <div class="grid grid-cols-2 gap-4 mt-8">
-                        <div class="card-hover glass p-5 rounded-2xl"><div class="font-semibold">Hair Styling</div><div class="text-white/40 text-sm">Premium</div></div>
-                        <div class="card-hover glass p-5 rounded-2xl"><div class="font-semibold">Hair Color</div><div class="text-white/40 text-sm">Expert</div></div>
+                    <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-4">About Us</div>
+                    <h2 class="font-display text-4xl font-bold mb-6">Where Style <span class="gradient-text">Meets Art</span></h2>
+                    <p class="text-white/50 text-lg mb-4">Welcome to NOIR — Guwahati's premier luxury salon. We believe every client deserves to look and feel their absolute best.</p>
+                    <p class="text-white/50 text-lg mb-8">Our team of expert stylists combines cutting-edge techniques with premium products to deliver transformations that exceed expectations.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card-hover glass p-5 rounded-2xl"><div class="font-semibold">Expert Stylists</div><div class="text-white/40 text-sm">5+ years exp.</div></div>
+                        <div class="card-hover glass p-5 rounded-2xl"><div class="font-semibold">Premium Products</div><div class="text-white/40 text-sm">Top brands</div></div>
                     </div>
                 </div>
             </div>
@@ -92,12 +94,56 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Services</div>
-                <h2 class="font-display text-4xl font-bold">What We Offer</h2>
+                <h2 class="font-display text-4xl font-bold">Our Services</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="card-hover glass p-8 rounded-3xl text-center"><h3 class="font-display text-xl font-semibold mb-2">Hair Styling</h3><p class="text-white/50">Best in class</p></div>
-                <div class="card-hover glass p-8 rounded-3xl text-center"><h3 class="font-display text-xl font-semibold mb-2">Hair Color</h3><p class="text-white/50">Expert team</p></div>
-                <div class="card-hover glass p-8 rounded-3xl text-center"><h3 class="font-display text-xl font-semibold mb-2">Bridal</h3><p class="text-white/50">Memorable</p></div>
+                <div class="card-hover glass p-8 rounded-3xl">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.5 5.5l4 4M14.5 5.5l-4 4M9.5 9.5l5 5M9.5 9.5l-5 5M5 14.5l4 4M5 14.5l-4 4M14.5 18.5l4-4M14.5 18.5l-4-4M18.5 14.5l-4 4M18.5 14.5l4 4"></path></svg>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold mb-2">Hair Styling</h3>
+                    <p class="text-white/50 text-sm">Cuts, styling & creative looks</p>
+                </div>
+                <div class="card-hover glass p-8 rounded-3xl">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold mb-2">Hair Color</h3>
+                    <p class="text-white/50 text-sm">Coloring, highlights & treatments</p>
+                </div>
+                <div class="card-hover glass p-8 rounded-3xl">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="font-display text-xl font-semibold mb-2">Bridal & Events</h3>
+                    <p class="text-white/50 text-sm">Bridal makeup & party looks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 md:py-32 px-6 bg-surface">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-primary text-sm font-semibold uppercase tracking-widest mb-4">Gallery</div>
+                <h2 class="font-display text-4xl font-bold">Our Space</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1200" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
             </div>
         </div>
     </section>
@@ -105,19 +151,19 @@
     <section id="contact" class="py-24 px-6 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
         <div class="max-w-2xl mx-auto text-center relative z-10">
-            <h2 class="font-display text-4xl font-bold mb-6">Book Now</h2>
-            <p class="text-white/50 text-lg mb-10">Experience the best salon in Guwahati</p>
-            <a href="https://wa.me/919233073272?text=Hi, interested in NOIR" class="inline-block px-10 py-5 rounded-full font-bold bg-primary text-white glow text-lg">💬 WhatsApp Us</a>
+            <h2 class="font-display text-4xl font-bold mb-6">Book Your <span class="gradient-text">Transformation</span></h2>
+            <p class="text-white/50 text-lg mb-10">Ready for a new look? Book your appointment today.</p>
+            <a href="https://wa.me/919233073272?text=Hi, I'd like to book an appointment at NOIR" class="inline-block px-10 py-5 rounded-full font-bold bg-primary text-white glow text-lg">💬 Book via WhatsApp</a>
             <div class="mt-12 grid grid-cols-2 gap-6">
                 <div class="glass p-6 rounded-2xl"><div class="text-white/50 text-sm">Phone</div><div class="font-semibold">070990 41227</div></div>
-                <div class="glass p-6 rounded-2xl"><div class="text-white/50 text-sm">Location</div><div class="font-semibold">Guwahati</div></div>
+                <div class="glass p-6 rounded-2xl"><div class="text-white/50 text-sm">Address</div><div class="font-semibold">GS Rd, Guwahati</div></div>
             </div>
         </div>
     </section>
 
     <footer class="py-10 px-6 border-t border-white/5 text-center">
         <div class="font-display text-xl font-bold mb-2">NOIR</div>
-        <div class="text-white/30">© 2026 NOIR | Guwahati</div>
+        <div class="text-white/30">© 2026 NOIR | Guwahati, Assam</div>
     </footer>
     <script>lucide.createIcons();</script>
 </body>
