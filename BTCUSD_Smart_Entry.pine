@@ -1,0 +1,111 @@
+//@version=5
+// BTCUSD Smart ML-Based Indicator
+// Buy Low, Sell High Strategy
+
+strategy("BTCUSD Smart Entry", overlay=true, default_qty_type=strategy.percent_of_equity, default_qty_value=10)
+
+// === INPUTS ===
+src = input(close, title="Source")
+len1 = input.int(21, title="Fast MA")
+len2 = input.int(55, title="Slow MA")
+rsiLen = input.int(14, title="RSI Length")
+obLevel = input.float(70, title="Overbought")
+osLevel = input.float(30, title="Oversold")
+bbLen = input.int(20, title="BB Length")
+bbStd = input.float(2.0, title="BB Std")
+useTrailingStop = input(true, title="Use Trailing Stop")
+tsPercent = input.float(2.0, title="Trailing Stop %")
+
+// === ML-LIKE ADAPTIVE PARAMETERS ===
+// Simulates ML by adjusting based on volatility
+volatility = ta.stdev(src, 50)
+atrVal = ta.atr(14)
+volatilityFactor = volatility / ta.stdev(src, 200)[1]
+adaptiveLookback = math.round(21 * volatilityFactor)
+
+// === INDICATORS ===
+// Moving Averages
+ma1 = ta.sma(src, len1)
+ma2 = ta.sma(src, len2)
+
+// RSI
+rsi = ta.rsi(src, rsiLen)
+
+// Bollinger Bands
+[bbUpper, bbMiddle, bbLower] = ta.bb(src, bbLen, bbStd)
+
+// MACD
+[macdLine, signalLine, hist] = ta.macd(src, 12, 26, 9)
+
+// Stochastic
+k = ta.stoch(src, high, low, 14)
+d = ta.sma(k, 3)
+
+// Volume confirmation
+volSMA = ta.sma(volume, 20)
+volConf = volume > volSMA * 1.5
+
+// === SIGNALS ===
+// Buy Signal: Multiple conditions
+buyCond1 = ta.crossover(ma1, ma2) // MA crossover
+buyCond2 = rsi < osLevel // Oversold
+buyCond3 = src < bbLower // At lower BB
+buyCond4 = k < 20 and crossover(k, d) // Stochastic oversold bounce
+
+// Combine with weight
+buyScore = 0.0
+buyScore := buyCond1 ? buyScore + 1 : buyScore
+buyScore := buyCond2 ? buyScore + 1 : buyScore
+buyScore := buyCond3 ? buyScore + 1 : buyScore
+buyScore := buyCond4 ? buyScore + 1 : buyScore
+
+buySignal = buyScore >= 3 and volConf
+
+// Sell Signal
+sellCond1 = ta.crossunder(ma1, ma2) // MA crossunder
+sellCond2 = rsi > obLevel // Overbought
+sellCond3 = src > bbUpper // At upper BB
+sellCond4 = k > 80 and crossunder(k, d) // Stochastic overbought
+
+sellScore = 0.0
+sellScore := sellCond1 ? sellScore + 1 : sellScore
+sellScore := sellCond2 ? sellScore + 1 : sellScore
+sellScore := sellCond3 ? sellScore + 1 : sellScore
+sellScore := sellCond4 ? sellScore + 1 : sellScore
+
+sellSignal = sellScore >= 3
+
+// === PLOTTING ===
+plot(ma1, color=color.blue, title="Fast MA")
+plot(ma2, color=color.orange, title="Slow MA")
+plot(bbUpper, color=color.gray, title="BB Upper")
+plot(bbLower, color=color.gray, title="BB Lower")
+plot(bbMiddle, color=color.gray, title="BB Middle")
+
+plotshape(buySignal, title="BUY", location=location.belowbar, color=color.lime, style=shape.labelup, text="BUY\nSignal")
+plotshape(sellSignal, title="SELL", location=location.abovebar, color=color.red, style=shape.labeldown, text="SELL\nSignal")
+
+// === ALERTS ===
+alertcondition(buySignal, title="Buy Alert", message="BTCUSD Buy Signal - Multiple conditions met")
+alertcondition(sellSignal, title="Sell Alert", message="BTCUSD Sell Signal - Multiple conditions met")
+
+// === STRATEGY ===
+if (buySignal)
+    strategy.entry("Long", strategy.long)
+
+if (sellSignal)
+    strategy.close("Long")
+
+// Trailing Stop
+if (useTrailingStop)
+    strategy.exit("TS", from_entry="Long", trail_percent=tsPercent, trail_offset=strategy.position_avg_price * tsPercent / 100)
+
+// === INFO LABELS ===
+var label infoLabel = label.new(x=bar_index, y=na, text="", style=label.style_label_lower_left, color=color.new(color.blue, 90), textcolor=color.white, size=size.small)
+label.set_xy(infoLabel, bar_index[1], high[1] + atrVal)
+label.set_text(infoLabel, "Score: " + str.tostring(buyScore) + "/4 | RSI: " + str.tostring(rsi, "#.##"))
+
+var label rsiLabel = label.new(x=bar_index, y=na, text="", style=label.style_label_upper_left, color=color.new(color.purple, 90), textcolor=color.white, size=size.tiny)
+label.set_xy(rsiLabel, bar_index[1], low[1] - atrVal)
+label.set_text(rsiLabel, "RSI: " + str.tostring(rsi, "#.#") + " | Price: " + str.tostring(src, "#.##"))
+
