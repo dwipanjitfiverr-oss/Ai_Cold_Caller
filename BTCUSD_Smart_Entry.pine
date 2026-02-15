@@ -1,93 +1,50 @@
 //@version=5
-// BTCUSD Smart ML-Based Indicator
-// Buy Low, Sell High Strategy
+// BTCUSD Smart ML-Based Indicator V2
+// Enhanced with trend filter + improved parameters
 
-strategy("BTCUSD Smart Entry", overlay=true, default_qty_type=strategy.percent_of_equity, default_qty_value=10)
+strategy("BTCUSD Smart Entry V2", overlay=true, default_qty_type=strategy.percent_of_equity, default_qty_value=10)
 
 // === INPUTS ===
 src = input(close, title="Source")
-len1 = input.int(21, title="Fast MA")
-len2 = input.int(55, title="Slow MA")
-rsiLen = input.int(14, title="RSI Length")
-obLevel = input.float(70, title="Overbought")
-osLevel = input.float(30, title="Oversold")
-bbLen = input.int(20, title="BB Length")
-bbStd = input.float(2.0, title="BB Std")
-useTrailingStop = input(true, title="Use Trailing Stop")
-tsPercent = input.float(2.0, title="Trailing Stop %")
-
-// === ML-LIKE ADAPTIVE PARAMETERS ===
-// Simulates ML by adjusting based on volatility
-volatility = ta.stdev(src, 50)
-atrVal = ta.atr(14)
-volatilityFactor = volatility / ta.stdev(src, 200)[1]
-adaptiveLookback = math.round(21 * volatilityFactor)
+emaLen = input.int(200, title="Trend EMA")
+rsiLen = input.int(14, title="RSI")
+stochLen = input.int(14, title="Stochastic")
+rsiOB = input.float(68, title="RSI Overbought")
+rsiOS = input.float(32, title="RSI Oversold")
+stochOB = input.float(75, title="Stochastic Overbought")
+stochOS = input.float(25, title="Stochastic Oversold")
+useTrailing = input(true, title="Trailing Stop")
+tsPercent = input.float(3.0, title="Trailing Stop %")
+profitTarget = input.float(5.0, title="Profit Target %")
 
 // === INDICATORS ===
-// Moving Averages
-ma1 = ta.sma(src, len1)
-ma2 = ta.sma(src, len2)
-
-// RSI
+ema200 = ta.ema(src, ema200)
 rsi = ta.rsi(src, rsiLen)
+stochK = ta.stoch(src, high, low, stochLen)
+stochD = ta.sma(stochK, 3)
 
-// Bollinger Bands
-[bbUpper, bbMiddle, bbLower] = ta.bb(src, bbLen, bbStd)
-
-// MACD
-[macdLine, signalLine, hist] = ta.macd(src, 12, 26, 9)
-
-// Stochastic
-k = ta.stoch(src, high, low, 14)
-d = ta.sma(k, 3)
-
-// Volume confirmation
-volSMA = ta.sma(volume, 20)
-volConf = volume > volSMA * 1.5
+// === TREND FILTER ===
+trendUp = src > ema200
 
 // === SIGNALS ===
-// Buy Signal: Multiple conditions
-buyCond1 = ta.crossover(ma1, ma2) // MA crossover
-buyCond2 = rsi < osLevel // Oversold
-buyCond3 = src < bbLower // At lower BB
-buyCond4 = k < 20 and crossover(k, d) // Stochastic oversold bounce
-
-// Combine with weight
-buyScore = 0.0
-buyScore := buyCond1 ? buyScore + 1 : buyScore
-buyScore := buyCond2 ? buyScore + 1 : buyScore
-buyScore := buyCond3 ? buyScore + 1 : buyScore
-buyScore := buyCond4 ? buyScore + 1 : buyScore
-
-buySignal = buyScore >= 3 and volConf
-
-// Sell Signal
-sellCond1 = ta.crossunder(ma1, ma2) // MA crossunder
-sellCond2 = rsi > obLevel // Overbought
-sellCond3 = src > bbUpper // At upper BB
-sellCond4 = k > 80 and crossunder(k, d) // Stochastic overbought
-
-sellScore = 0.0
-sellScore := sellCond1 ? sellScore + 1 : sellScore
-sellScore := sellCond2 ? sellScore + 1 : sellScore
-sellScore := sellCond3 ? sellScore + 1 : sellScore
-sellScore := sellCond4 ? sellScore + 1 : sellScore
-
-sellSignal = sellScore >= 3
+buySignal = trendUp and rsi < rsiOS and stochK < stochOS
+sellSignal = rsi > rsiOB or stochK > stochOB
 
 // === PLOTTING ===
-plot(ma1, color=color.blue, title="Fast MA")
-plot(ma2, color=color.orange, title="Slow MA")
-plot(bbUpper, color=color.gray, title="BB Upper")
-plot(bbLower, color=color.gray, title="BB Lower")
-plot(bbMiddle, color=color.gray, title="BB Middle")
+plot(ema200, color=color.red, title="200 EMA", linewidth=2)
 
-plotshape(buySignal, title="BUY", location=location.belowbar, color=color.lime, style=shape.labelup, text="BUY\nSignal")
-plotshape(sellSignal, title="SELL", location=location.abovebar, color=color.red, style=shape.labeldown, text="SELL\nSignal")
+plotshape(buySignal, title="BUY", location=location.belowbar, 
+     color=color.lime, style=shape.labelup, text="BUY\n(RSI:" + str.tostring(rsi, "#") + ")")
 
-// === ALERTS ===
-alertcondition(buySignal, title="Buy Alert", message="BTCUSD Buy Signal - Multiple conditions met")
-alertcondition(sellSignal, title="Sell Alert", message="BTCUSD Sell Signal - Multiple conditions met")
+plotshape(sellSignal, title="SELL", location=location.abovebar, 
+     color=color.red, style=shape.labeldown, text="SELL")
+
+// RSI Plot
+rsiPlot = plot(rsi, title="RSI", color=color.purple, linewidth=2)
+plot(rsiOB, color=color.red, linestyle=plot.style_line)
+plot(rsiOS, color=color.lime, linestyle=plot.style_line)
+fill(rsiPlot, plot(rsiOB), color=color.new(color.red, 90))
+fill(rsiPlot, plot(rsiOS), color=color.new(color.lime, 90))
 
 // === STRATEGY ===
 if (buySignal)
@@ -96,16 +53,18 @@ if (buySignal)
 if (sellSignal)
     strategy.close("Long")
 
-// Trailing Stop
-if (useTrailingStop)
-    strategy.exit("TS", from_entry="Long", trail_percent=tsPercent, trail_offset=strategy.position_avg_price * tsPercent / 100)
+// Profit target
+strategy.exit("ProfitTarget", from_entry="Long", qty_percent=50, limit=strategy.position_avg_price * (1 + profitTarget/100))
 
-// === INFO LABELS ===
-var label infoLabel = label.new(x=bar_index, y=na, text="", style=label.style_label_lower_left, color=color.new(color.blue, 90), textcolor=color.white, size=size.small)
-label.set_xy(infoLabel, bar_index[1], high[1] + atrVal)
-label.set_text(infoLabel, "Score: " + str.tostring(buyScore) + "/4 | RSI: " + str.tostring(rsi, "#.##"))
+// Trailing stop
+if (useTrailing)
+    strategy.exit("TS", from_entry="Long", trail_percent=tsPercent)
 
-var label rsiLabel = label.new(x=bar_index, y=na, text="", style=label.style_label_upper_left, color=color.new(color.purple, 90), textcolor=color.white, size=size.tiny)
-label.set_xy(rsiLabel, bar_index[1], low[1] - atrVal)
-label.set_text(rsiLabel, "RSI: " + str.tostring(rsi, "#.#") + " | Price: " + str.tostring(src, "#.##"))
+// === ALERTS ===
+alertcondition(buySignal, title="Buy Alert", message="BTCUSD BUY - RSI:{{rsi}} Stoch:{{stochK}}")
+alertcondition(sellSignal, title="Sell Alert", message="BTCUSD SELL - RSI:{{rsi}} Stoch:{{stochK}}")
 
+// === INFO ===
+var label lbl = label.new(bar_index, high, "RSI: " + str.tostring(rsi, "#.0"), 
+     color=color.new(color.blue, 80), textcolor=color.white, size=size.tiny, style=label.style_label_upper)
+label.set_x(lbl, bar_index)
